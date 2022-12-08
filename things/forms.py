@@ -5,6 +5,6 @@ from .models import Thing
 
 
 class ThingForm(forms.Form):
-    name = forms.CharField(label="name")
-    description = forms.TextArea(label="description")
-    quantity = forms.NumberInput(label="quantity")
+    name = forms.CharField(label="Name")
+    description = forms.CharField(widget=forms.TextInput(attrs={'name':'description'}))
+    quantity = forms.IntegerField(widget=forms.NumberInput(attrs={'name':'quantity'}))

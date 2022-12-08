@@ -5,7 +5,7 @@ def home(request):
     if request.method == 'POST':
         form = ThingForm(request.POST)
         if form.is_valid():
-            thing = form.save()
+            #thing = form.save()
             return redirect('home')
     else:
         form = ThingForm()
